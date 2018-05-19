@@ -72,6 +72,13 @@ public class Percolation {
 
 	// does the system percolate?
 	public boolean percolates() {
+		processAll();
+		
+		for (int i = 1; i <= n; i++) {
+			if (isFull(n,i)) {
+				return true;
+			}
+		}
 		return false;
 	}
 
