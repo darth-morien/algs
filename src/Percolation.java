@@ -2,7 +2,6 @@ import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
-import java.util.Random;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
@@ -19,10 +18,10 @@ public class Percolation {
 
 	// create n-by-n grid, with all sites blocked
 	public Percolation(int n) {
-		this.n = n;
 		if (n <= 0) {
 			throw new java.lang.IllegalArgumentException();
 		} else {
+			this.n = n;
 			this.grid = new int[n][n];// initialized with 0, that means "blocked"
 			this.row = StdRandom.uniform(1,n);
 			this.col = StdRandom.uniform(1,n);
